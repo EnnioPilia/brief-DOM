@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="loadingAnimation"></div> 
+<div id="displayContent"> 
+<img src="./logo_acs.png" alt="logo acs"> 
+</div> 
+<script type="text/javascript" src="roue.js"></script>
+<style>
+    #displayContent { 
+    display: none; 
+    text-align: center; 
+    } 
+    #loadingAnimation { 
+    position: absolute; 
+    left: 50%; 
+    top: 50%; 
+    width: 100px; 
+    height: 100px; 
+    border: 16px solid #f3f3f3; 
+    border-radius: 50%; 
+    border-top: 16px solid #d31f43; 
+    animation: spin 3s linear infinite; 
+    } 
+    @keyframes spin { 
+        from {
+    transform: rotate(0deg);
+    }
+        to {
+    transform: rotate(360deg);
+    }
+}
+    </style>
+</body>
+</html>

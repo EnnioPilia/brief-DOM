@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Snackbar / Toast</h2> 
+    <p>Cliquer pour faire apparaître la snackbar. Elle disparaitra après 3 
+secondes.</p> 
+    <button id="btn">Affiche Snackbar</button> 
+    <div id="snackbar">Du texte, des messages...</div>
+    <script src="snapbar.js"></script>
+    <style>
+        #snackbar { 
+    visibility: hidden; 
+    width: 250px; 
+    background-color: #333; 
+    color: #fff; 
+    text-align: center; 
+    padding: 16px; 
+    border-radius: 10px; 
+    position: absolute; 
+    z-index: 1; 
+    left: 50%; 
+    margin-left: -125px; 
+    bottom: 30px; 
+    font-size: 17px; 
+} 
+#snackbar.show { 
+    visibility: visible; 
+    animation: appear 0.5s, disappear 0.5s 2.5s; 
+} 
+@keyframes appear { 
+    from { 
+        bottom: 0; opacity: 0; 
+    } 
+    to { 
+        bottom: 30px; opacity: 1; 
+    } 
+} 
+ 
+@keyframes disappear { 
+    from { 
+        bottom: 30px; opacity: 1; 
+} 
+to { 
+bottom: 0; opacity: 0; 
+} 
+}
+    </style>
+</body>
+</html>
